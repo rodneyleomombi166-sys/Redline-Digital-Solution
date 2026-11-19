@@ -1,3 +1,9 @@
+import heroImageAsset from '../assets/images/hero_png_business_digital_1791590731144.jpg';
+import whyChooseImageAsset from '../assets/images/why_choose_png_sme_1791590742386.jpg';
+import portfolioDiscoverPngAsset from '../assets/images/portfolio_discover_png_tourism_1791590752158.jpg';
+import portfolioCoffeeAsset from '../assets/images/portfolio_highlands_coffee_sme_1791590763708.jpg';
+import portfolioLodgeAsset from '../assets/images/portfolio_hospitality_lodge_png_1791590774258.jpg';
+
 export type PageId =
   | 'home'
   | 'about'
@@ -118,16 +124,15 @@ export function getWhatsAppUrl(customMessage?: string): string {
   return `https://wa.me/${BRAND_INFO.phoneRaw}?text=${encodeURIComponent(message)}`;
 }
 
-export const HERO_IMAGE = '/src/assets/images/hero_png_business_digital_1791590731144.jpg';
-export const FOUNDER_IMAGE = '/assets/aistudio/rodney_office_set_f036b419.png';
-export const HERO_BG_IMAGE = '/assets/aistudio/website_designs_d4abe031.jpg';
-export const WHY_CHOOSE_IMAGE = '/src/assets/images/why_choose_png_sme_1791590742386.jpg';
-export const PORTFOLIO_DISCOVER_PNG_IMAGE =
-  '/src/assets/images/portfolio_discover_png_tourism_1791590752158.jpg';
-export const PORTFOLIO_COFFEE_IMAGE =
-  '/src/assets/images/portfolio_highlands_coffee_sme_1791590763708.jpg';
-export const PORTFOLIO_LODGE_IMAGE =
-  '/src/assets/images/portfolio_hospitality_lodge_png_1791590774258.jpg';
+const BASE = import.meta.env.BASE_URL || './';
+
+export const HERO_IMAGE = heroImageAsset;
+export const FOUNDER_IMAGE = `${BASE}assets/aistudio/rodney_office_set_f036b419.png`;
+export const HERO_BG_IMAGE = `${BASE}assets/aistudio/website_designs_d4abe031.jpg`;
+export const WHY_CHOOSE_IMAGE = whyChooseImageAsset;
+export const PORTFOLIO_DISCOVER_PNG_IMAGE = portfolioDiscoverPngAsset;
+export const PORTFOLIO_COFFEE_IMAGE = portfolioCoffeeAsset;
+export const PORTFOLIO_LODGE_IMAGE = portfolioLodgeAsset;
 
 export const TRUST_CARDS: TrustCard[] = [
   {
